@@ -18,9 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('test' , function() {
-    return \App\Models\User::create([
-        'name'=>"Abbass",
-        'email'=>"abbassmortazavdddi@gmail.com",
-        'password' => '1111'
-    ]);
+    return \App\Models\User::all();
 });
