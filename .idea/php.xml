@@ -113,6 +113,7 @@
       <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/src/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/src/vendor/aschmelyun/larametrics" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">

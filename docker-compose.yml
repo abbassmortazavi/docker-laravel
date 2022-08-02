@@ -62,3 +62,12 @@ services:
       MYSQL_ROOT_PASSWORD: secret
     networks:
       - laravel
+
+  composer:
+    image: composer:latest
+    container_name: composer
+    volumes:
+      - ./src:/var/www/html
+    working_dir: /var/www/html
+    networks:
+      - laravel

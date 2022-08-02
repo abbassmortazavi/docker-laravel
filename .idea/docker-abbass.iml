@@ -119,6 +119,7 @@
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/polyfill-intl-grapheme" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/src/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/src/vendor/aschmelyun/larametrics" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

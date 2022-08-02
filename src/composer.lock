@@ -4,8 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccbd816a07b206f971042295b899d1ba",
+    "content-hash": "d65372a1e8111bdab964e0c10478df1a",
     "packages": [
+        {
+            "name": "aschmelyun/larametrics",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aschmelyun/larametrics.git",
+                "reference": "2b8e435d4d8d4ab9fa3a73b1b41264a3732cb08c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aschmelyun/larametrics/zipball/2b8e435d4d8d4ab9fa3a73b1b41264a3732cb08c",
+                "reference": "2b8e435d4d8d4ab9fa3a73b1b41264a3732cb08c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Aschmelyun\\Larametrics\\LarametricsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aschmelyun\\Larametrics\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Schmelyun",
+                    "email": "me@aschmelyun.com",
+                    "homepage": "https://aschmelyun.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A self-hosted metrics and notifications platform for Laravel apps",
+            "support": {
+                "issues": "https://github.com/aschmelyun/larametrics/issues",
+                "source": "https://github.com/aschmelyun/larametrics/tree/1.1.5"
+            },
+            "time": "2019-09-15T22:43:38+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.9.3",
@@ -7927,5 +7979,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
