@@ -18,5 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('test' , function() {
-    dd('okkkkkkkkkkkkkkkkkkkkkkkkkkk');
+    return \App\Models\User::create([
+        'name'=>"Abbass",
+        'email'=>"abbassmortazavdddi@gmail.com",
+        'password' => '1111'
+    ]);
 });
