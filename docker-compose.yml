@@ -19,7 +19,7 @@ services:
       - laravel
 
   mysql:
-    image: mysql:8.0.28
+    image: mysql:8.0.13
     container_name: mysql
     restart: unless-stopped
     tty: true
@@ -91,7 +91,7 @@ services:
     depends_on:
       - mysql
     working_dir: /var/www/html
-    entrypoint: ['/var/www/html/artisan']
+    entrypoint: [ '/var/www/html/artisan' ]
     networks:
       - laravel
   cron:
@@ -101,5 +101,17 @@ services:
     container_name: cron
     volumes:
       - ./src:/var/www/html
+    networks:
+      - laravel
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: unless-stopped
+    volumes:
+      - ./src:/var/www/html
+      - ./redis/redis.conf:/etc/redis/redis.conf
+    ports:
+      - "6379:6379"
     networks:
       - laravel
