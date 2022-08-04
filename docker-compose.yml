@@ -118,3 +118,34 @@ services:
       - "6379:6379"
     networks:
       - laravel
+
+  # Laravel Echo Server
+  laravel-echo-server:
+    build:
+      context: ./laravel-echo-server
+    container_name: laravel_echo_server
+    restart: unless-stopped
+    volumes:
+      - ./laravel-echo-server/laravel-echo-server.json:/app/laravel-echo-server.json:ro
+    ports:
+      - "2096:2096"
+    links:
+      - redis
+    networks:
+      - laravel
+  # REDIS MANAGEMENT SOFTWARE
+  redis-webui:
+    build:
+      context: ./redis-webui
+    container_name: redis-webui
+    environment:
+      - ADMIN_USER=root
+      - ADMIN_PASS=root
+      - REDIS_1_HOST=redis
+      - REDIS_1_PORT=6379
+    networks:
+      - laravel
+    ports:
+      - "9987:80"
+    depends_on:
+      - redis
