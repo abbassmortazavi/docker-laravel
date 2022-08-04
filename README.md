@@ -7,17 +7,42 @@
 </p>
 
 
-## Technology Stack
-- Laravel 9.x with php 8.x
+
+## Services
+- Nginx
+- Redis
 - Mysql
-- DDD Hexagonal Architecture [Scaling Laravel Architecture]
-- TDD. All endpoints [PHPUnit and FeatureTest]
-- RESTFul API
-- API Versioning
-- Dockerize by LaraDoc
-- Eloquent and Suitable Relations
-- Migrations
-- Seeders and Factories
-- Laravel ApiDoc Generator
-- Laravel Api Resources
-- Follow Type Hinting
+- PHP
+- PhpMyAdmin
+- Composer
+- Npm
+- Artisan
+- Cron
+
+## Installation
+```sh
+docker-compose up -d --bulid
+docker-compose up -d down
+```
+
+## Migrate
+```sh
+docker-compose run --rm artisan migrate
+```
+
+## Composer update or Install
+```sh
+docker-compose run --rm composer i
+docker-compose run --rm composer u
+```
+
+## Start and Stop Cron Job
+```sh
+docker-compose start cron
+docker-compose stop cron
+```
+
+## Npm Install
+```sh
+docker-compose run --rm npm i
+```

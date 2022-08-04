@@ -81,6 +81,7 @@ services:
     entrypoint: [ 'npm' ]
     networks:
       - laravel
+
   artisan:
     build:
       context: .
@@ -94,6 +95,8 @@ services:
     entrypoint: [ '/var/www/html/artisan' ]
     networks:
       - laravel
+
+
   cron:
     build:
       context: .
