@@ -46,3 +46,11 @@ docker-compose stop cron
 ```sh
 docker-compose run --rm npm i
 ```
+
+## Npm Install
+```sh
+error : You do not have the SUPER privilege and binary logging is enabled
+step 1: docker exec -it mysql bash
+step 2: mysql -u root -p
+step 3: SET GLOBAL log_bin_trust_function_creators = 1;
+```
