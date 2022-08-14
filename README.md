@@ -47,10 +47,26 @@ docker-compose stop cron
 docker-compose run --rm npm i
 ```
 
-## Npm Install
+## Error Mysql
 ```sh
 error : You do not have the SUPER privilege and binary logging is enabled
 step 1: docker exec -it mysql bash
 step 2: mysql -u root -p
 step 3: SET GLOBAL log_bin_trust_function_creators = 1;
+```
+
+## Error Mysql
+```sh
+error : You do not have the SUPER privilege and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)
+step 1: docker exec -it mysql bash
+step 2: mysql -u root -p
+step 3: set global log_bin_trust_function_creators=1;
+```
+
+## Error Mysql
+```sh
+error : Access denied; you need (at least one of) the SUPER or SET_USER_ID privilege(s) for this operation
+step 1: docker exec -it mysql bash
+step 2: mysql -u root -p
+step 3: grant all privileges on homestead.* to homestead@'%' with grant option;
 ```
