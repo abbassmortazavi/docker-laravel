@@ -21,7 +21,7 @@
 
 ## Installation
 ```sh
-docker-compose up -d --bulid
+docker-compose up -d --build
 docker-compose up -d down
 ```
 
