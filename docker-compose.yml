@@ -10,7 +10,7 @@ services:
     ports:
       - "8082:80"
     volumes:
-      - ../drdr:/var/www/html
+      - ../TriviaGame:/var/www/html
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
@@ -42,7 +42,7 @@ services:
       dockerfile: Dockerfile
     container_name: php
     volumes:
-      - ../drdr:/var/www/html
+      - ../TriviaGame:/var/www/html
     ports:
       - "9000:9000"
     networks:
@@ -67,7 +67,7 @@ services:
     image: composer:latest
     container_name: composer
     volumes:
-      - ../drdr:/var/www/html
+      - ../TriviaGame:/var/www/html
     working_dir: /var/www/html
     networks:
       - laravel
@@ -76,7 +76,7 @@ services:
     image: node:latest
     container_name: npm
     volumes:
-      - ../drdr:/var/www/html
+      - ../TriviaGame:/var/www/html
     working_dir: /var/www/html
     entrypoint: [ 'npm' ]
     networks:
@@ -88,7 +88,7 @@ services:
       dockerfile: Dockerfile
     container_name: artisan
     volumes:
-      - ../drdr:/var/www/html
+      - ../TriviaGame:/var/www/html
     depends_on:
       - mysql
     working_dir: /var/www/html
@@ -102,11 +102,11 @@ services:
       dockerfile: cron.dockerfile
     container_name: cron
     volumes:
-      - ../drdr:/var/www/html
+      - ../TriviaGame:/var/www/html
     networks:
       - laravel
 
-  rediss:
+  redis:
     image: redis:latest
     container_name: rediss
     restart: unless-stopped
