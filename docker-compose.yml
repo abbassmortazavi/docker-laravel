@@ -125,26 +125,26 @@ services:
     networks:
       - laravel_network
 
-  mongo:
-    image: mongo:latest  # Use the official MongoDB image
-    container_name: mongodb_container
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root  # Set the root username
-      MONGO_INITDB_ROOT_PASSWORD: password  # Set the root password
-    ports:
-      - "27017:27017"  # Map the MongoDB port to the host machine
-    volumes:
-      # Persist MongoDB data in a Docker volume
-      - ./data/mongo-data:/data/db
-    networks:
-      - laravel_network
+#  mongo:
+#    image: mongo:latest  # Use the official MongoDB image
+#    container_name: mongodb_container
+#    restart: always
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: root  # Set the root username
+#      MONGO_INITDB_ROOT_PASSWORD: password  # Set the root password
+#    ports:
+#      - "27017:27017"  # Map the MongoDB port to the host machine
+#    volumes:
+#      # Persist MongoDB data in a Docker volume
+#      - ./data/mongo-data:/data/db
+#    networks:
+#      - laravel_network
 
 
 volumes:
   db_data:
   data:
-  mongo-data:
+#  mongo-data:
 
 networks:
   laravel_network:
